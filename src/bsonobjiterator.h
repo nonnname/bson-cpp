@@ -17,7 +17,7 @@
 
 #pragma once
 
-#include <boost/preprocessor/cat.hpp> // like the ## operator but works with __LINE__
+//#include <boost/preprocessor/cat.hpp> // like the ## operator but works with __LINE__
 
 namespace bson {
 

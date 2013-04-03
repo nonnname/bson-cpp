@@ -17,14 +17,15 @@
 
 #pragma once
 
-#include <boost/intrusive_ptr.hpp>
+//#include <boost/intrusive_ptr.hpp>
 #include <set>
 #include <list>
 #include <vector>
-#include "lib/atomic_int.h"
+#include "../lib/atomic_int.h"
 #include "util/builder.h"
 #include "stringdata.h"
 #include "bsonelement.h"
+#include "overboost.h"
 
 namespace bson {
 
@@ -447,7 +448,7 @@ namespace bson {
         }
 
 #pragma pack(1)
-        class Holder : boost::noncopyable {
+        class Holder {
         private:
             Holder(); // this class should never be explicitly created
             mongo::AtomicUInt refCount;
@@ -471,7 +472,7 @@ namespace bson {
 
     private:
         const char *_objdata;
-        boost::intrusive_ptr< Holder > _holder;
+        intrusive_ptr< Holder > _holder;
 
         void _assertInvalid() const;
 

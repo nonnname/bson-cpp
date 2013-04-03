@@ -80,7 +80,7 @@ namespace bson {
     /** Utility for creating a BSONObj.
         See also the BSON() and BSON_ARRAY() macros.
     */
-    class BSONObjBuilder : boost::noncopyable {
+    class BSONObjBuilder : noncopyable {
     public:
         /** @param initsize this is just a hint as to the final size of the
             object */
@@ -707,7 +707,7 @@ namespace bson {
         static const string numStrs[100]; // cache of 0 to 99 inclusive
     };
 
-    class BSONArrayBuilder : boost::noncopyable {
+    class BSONArrayBuilder : noncopyable {
     public:
         BSONArrayBuilder() : _i(0), _b() {}
         BSONArrayBuilder( BufBuilder &_b ) : _i(0), _b(_b) {}

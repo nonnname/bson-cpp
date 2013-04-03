@@ -28,7 +28,7 @@
  *    limitations under the License.
  */
 
-#include "../bson.h"
+#include "../src/bson.h"
 #include <iostream>
 #include <vector>
 

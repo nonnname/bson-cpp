@@ -26,7 +26,7 @@
 #pragma once
 
 #include "util/optime.h"
-#include "util/time_support.h"
+//#include "util/time_support.h"
 
 #ifndef log
 #define log(...) std::cerr
@@ -67,12 +67,12 @@ namespace bson {
         return "";
     }
 
-    inline BSONObjBuilder& BSONObjBuilderValueStream::operator<<(
+    /*inline BSONObjBuilder& BSONObjBuilderValueStream::operator<<(
       DateNowLabeler& id) {
         _builder->appendDate(_fieldName, jsTime());
         _fieldName = 0;
         return *_builder;
-    }
+    }*/
 
     inline BSONObjBuilder& BSONObjBuilderValueStream::operator<<(
       MinKeyLabeler& id) {
